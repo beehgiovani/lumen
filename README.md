@@ -1,51 +1,39 @@
-# LÚMEN | Spatial Drawing Engine
+# LÚMEN | Spatial Drawing Engine (Multi-Platform)
 
-![Lúmen Logo](./src/assets/logo.png)
+![Lúmen Logo](./lumen-web/src/assets/logo.png)
 
-**Lúmen** é uma engine de desenho espacial de alta performance que utiliza Inteligência Artificial e Visão Computacional para transformar movimentos das mãos em arte digital vibrante e dinâmica.
+**Lúmen** é um ecossistema de desenho espacial de alta performance que utiliza Inteligência Artificial e Visão Computacional para transformar movimentos das mãos em arte digital vibrante. Disponível para **Web** e **Android Nativo**.
 
 ---
 
 ## 🚀 Tecnologias de Ponta
 
-*   **Core**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/) (Ultra Fast Build & HMR)
-*   **Visão Computacional**: [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker) (Detecção 21 pontos em tempo real)
-*   **Renderização**: HTML5 Canvas API com Pipeline de Otimização Layered
-*   **Áudio**: Web Audio API (Sintetizadores dinâmicos baseados em velocidade e ferramenta)
-*   **Design**: CSS Moderno (Glassmorphism, Backdrop Filters, Soft Shadows)
-*   **Arquitetura**: Clean Architecture com separação rigorosa de domínios (Core Engine, UI, Business Logic)
+### 🌐 Web Engine
+*   **Core**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+*   **Visão**: [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker)
+*   **Render**: HTML5 Canvas Layered Pipeline
+*   **Áudio**: Web Audio API (Sintetizadores Reativos)
+
+### 📱 Android Native
+*   **Linguagem**: [Kotlin 2.2.21](https://kotlinlang.org/)
+*   **UI**: [Jetpack Compose](https://developer.android.com/compose)
+*   **IA**: TensorFlow Lite / MediaPipe Android SDK
+*   **Arquitetura**: Clean Architecture (Módulos: `feature-drawing`, `domain`, `data`)
 
 ---
 
-## ✨ Funcionalidades Premium
-
-*   **21 Ferramentas de Desenho**: De pincéis neon a geradores de galáxias e formas 3D projetadas.
-*   **Som Reativo**: Cada pincel possui uma assinatura sonora única que reage à velocidade do movimento.
-*   **Controles Gestuais**:
-    *   **Apontar**: Desenhar.
-    *   **Punho Fechado**: Borracha inteligente.
-    *   **Polegar para Baixo**: Limpar tela (Gesture-hold).
-    *   **Pinch/Hover**: Interação com interface sem toque.
-*   **Efeitos Avançados**: Kaleidoscope, Mirror Mode, Bloom Intensity, Echo Persistence.
-*   **AI Autocomplete**: Detecção e correção automática de formas geométricas (Círculos e Quadrados).
-*   **Exportação**: Salve sua arte em alta resolução (PNG).
-
----
-
-## 📂 Estrutura do Projeto
+## 📂 Estrutura do Ecossistema
 
 ```txt
-/lumen-web
-├── src/
-│   ├── assets/          # Logos e recursos estáticos
-│   ├── components/      # Componentes UI (Sidebar, Controls, Onboarding)
-│   ├── utils/
-│   │   ├── drawingEngine.js # Motor de renderização principal
-│   │   ├── soundEngine.js   # Motor de síntese de áudio
-│   │   └── constants.js     # Configurações globais e cores
-│   └── App.jsx          # Orquestrador principal e lógica de IA
-├── public/              # Arquivos públicos e WASM do MediaPipe
-└── package.json         # Dependências e scripts
+/Lúmen
+├── lumen-web/           # Engine Web (React)
+│   ├── src/
+│   │   ├── utils/       # Motor de renderização e som
+│   │   └── App.jsx      # Orquestrador de IA
+├── app/                 # Aplicativo Android Principal
+├── feature-drawing/     # Módulo de desenho nativo (Kotlin)
+├── domain/              # Regras de negócio compartilhadas
+└── README.md            # Documentação unificada
 ```
 
 ---
