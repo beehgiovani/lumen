@@ -1,0 +1,47 @@
+# Built variants
+**/build/
+*.apk
+*.aar
+*.ap_
+*.dex
+*.class
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.gradle/
+local.properties
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+cmake-build-debug/
+cmake-build-release/
+
+# Kotlin
+.kotlin/
+*.kotlin_module
+
+# Node.js (lumen-web)
+lumen-web/node_modules/
+lumen-web/dist/
+lumen-web/build/
+lumen-web/.env*
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Backup / Temp
+*.bak
+*.tmp
+/backup
+/scripts-externos
+/extras-workspace
+/tools-lab
