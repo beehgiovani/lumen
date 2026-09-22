@@ -1,71 +1,43 @@
-# LÚMEN | Spatial Drawing Engine (Multi-Platform)
+# Lúmen
 
-![Lúmen Logo](./lumen-web/src/assets/logo.png)
+Protótipo Android em Kotlin e Jetpack Compose para explorar desenho, visão computacional e organização modular.
 
-**Lúmen** é um ecossistema de desenho espacial de alta performance que utiliza Inteligência Artificial e Visão Computacional para transformar movimentos das mãos em arte digital vibrante. Disponível para **Web** e **Android Nativo**.
+## Estado do repositório
 
----
+- A base Android e seus módulos estão versionados.
+- O item `lumen-web` aparece no histórico como referência Git, mas o conteúdo web não está incluído neste repositório público.
+- O projeto é experimental; não é apresentado como produto em produção nem como modelo próprio de inteligência artificial.
 
-## 🚀 Tecnologias de Ponta
+## Stack confirmada no repositório
 
-### 🌐 Web Engine
-*   **Core**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-*   **Visão**: [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker)
-*   **Render**: HTML5 Canvas Layered Pipeline
-*   **Áudio**: Web Audio API (Sintetizadores Reativos)
+- Kotlin e Jetpack Compose.
+- Estrutura multimódulo Gradle.
+- Módulos `domain`, `data`, `vision`, `ui-common` e `feature-drawing`.
+- Android SDK e testes por Gradle.
 
-### 📱 Android Native
-*   **Linguagem**: [Kotlin 2.2.21](https://kotlinlang.org/)
-*   **UI**: [Jetpack Compose](https://developer.android.com/compose)
-*   **IA**: TensorFlow Lite / MediaPipe Android SDK
-*   **Arquitetura**: Clean Architecture (Módulos: `feature-drawing`, `domain`, `data`)
+## Estrutura
 
----
+- `app`: aplicação Android.
+- `domain`: modelos e regras.
+- `data`: persistência e acesso a dados.
+- `vision`: componentes relacionados à visão.
+- `feature-drawing`: fluxo de desenho.
+- `ui-common`: elementos de interface compartilhados.
 
-## 📂 Estrutura do Ecossistema
+## Build
 
-```txt
-/Lúmen
-├── lumen-web/           # Engine Web (React)
-│   ├── src/
-│   │   ├── utils/       # Motor de renderização e som
-│   │   └── App.jsx      # Orquestrador de IA
-├── app/                 # Aplicativo Android Principal
-├── feature-drawing/     # Módulo de desenho nativo (Kotlin)
-├── domain/              # Regras de negócio compartilhadas
-└── README.md            # Documentação unificada
+No Windows:
+
+```powershell
+.\gradlew.bat :app:assembleDebug
 ```
 
----
+Em Linux ou macOS:
 
-## 🛠️ Instalação e Execução
+```bash
+./gradlew :app:assembleDebug
+```
 
-1.  Clone o repositório.
-2.  Instale as dependências:
-    ```bash
-    npm install
-    ```
-3.  Inicie o servidor de desenvolvimento:
-    ```bash
-    npm run dev
-    ```
+## Limites
 
----
-
-## 🧠 Protocolos de Engenharia (V6.1)
-
-Este projeto segue rigorosamente o **Protocolo Global de Engenharia de Bruno Giovani**, priorizando:
-*   **Responsividade Absoluta**: Tarefas pesadas executadas de forma assíncrona.
-*   **Zero Leak Policy**: Gestão segura de segredos e higienização de repositório.
-*   **Offline-First Strategy**: Persistência local resiliente.
-*   **UI/UX Standard Premium**: Estética moderna com micro-interações fluidas.
-
----
-
-## 👨‍💻 Autor
-
-**Bruno Giovani (2026)**
-Engenharia de Software de Alta Performance | GovTechs | GIS | IA
-
----
-*Lúmen - Onde o gesto se torna luz.*
+O README anterior descrevia também uma experiência web com React, MediaPipe, Canvas e Web Audio. Como esse código não está disponível neste repositório público, ele não é tratado aqui como evidência versionada.
