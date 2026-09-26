@@ -1,0 +1,17 @@
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.sh text eol=lf
+
+*.jar binary
+*.task binary
+*.png binary
+*.webp binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.apk binary
+*.aab binary
+*.jks binary
+*.keystore binary

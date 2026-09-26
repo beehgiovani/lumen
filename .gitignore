@@ -1,6 +1,8 @@
 # Built variants
 **/build/
+**/bin/
 *.apk
+*.aab
 *.aar
 *.ap_
 *.dex
@@ -27,6 +29,7 @@ lumen-web/node_modules/
 lumen-web/dist/
 lumen-web/build/
 lumen-web/.env*
+!lumen-web/.env.example
 
 # Logs
 *.log
@@ -45,3 +48,10 @@ Thumbs.db
 /scripts-externos
 /extras-workspace
 /tools-lab
+
+# Credentials and signing material
+*.jks
+*.keystore
+*.p12
+*.pfx
+keystore.properties
