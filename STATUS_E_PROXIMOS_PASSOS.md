@@ -1,6 +1,6 @@
 # Status e próximos passos — Lúmen
 
-> Auditoria de 22/09/2026. Esta é uma fotografia baseada em arquivos, Git, artefatos e endpoints observáveis. Nenhum build completo foi executado nesta classificação.
+> Atualizado em 26/09/2026 após remoção de duplicatas e build Android local.
 
 ## Classificação
 
@@ -11,8 +11,9 @@
 ## Evidências observadas
 
 - O repositório Android possui módulos de domínio, dados, visão, UI comum e desenho.
-- Não foram encontrados APK/AAB atuais; o último commit é de maio de 2026.
-- `lumen-web` existe localmente, mas a relação dele com o repositório principal precisa ser regularizada; há alteração local no README.
+- Duplicatas de fontes geradas em `domain/bin` foram removidas da árvore rastreada.
+- `assembleDebug` passou; um teste do módulo de domínio ainda falha por comportamento preexistente e está registrado como pendência.
+- Não há APK/AAB versionado nem evidência de uma experiência completa validada.
 
 ## Diagnóstico franco
 
@@ -22,7 +23,7 @@ A arquitetura demonstra capacidade técnica, porém ainda não há uma experiên
 
 ### P0 — preservar e tornar retomável
 
-- Preservar a alteração local do README em uma branch.
+- [x] Consolidar o README e remover fontes duplicadas do versionamento.
 - Decidir se a versão canônica será Android ou web; não evoluir as duas ao mesmo tempo.
 - Corrigir o versionamento de `lumen-web` como pasta normal, submódulo válido ou repositório separado.
 
